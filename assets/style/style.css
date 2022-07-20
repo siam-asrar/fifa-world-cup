@@ -10,6 +10,9 @@ body {
   width: 100%;
 }
 
+/*--------------------------------------------------------------------------
+Index
+--------------------------------------------------------------------------*/
 /* ----
 Header 
 ------*/
@@ -29,6 +32,10 @@ h1 {
   font-size: 70px;
 }
 
+.banner-container {
+  padding-top: 100px;
+}
+
 .banner-container p {
   color: white;
   font-weight: 400;
@@ -45,7 +52,6 @@ h1 {
   border-radius: 5px;
   border: 0px;
   font-size: 20px;
-  margin-top: 100px;
 }
 
 .watch-live a,
@@ -108,9 +114,12 @@ nav li a {
 /* Article */
 .match-info {
   height: 800px;
+  width: 1000px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 15px;
+  padding: 25px;
+  margin-top: -20px;
+  margin-left: -60px;
 }
 
 .match-info button {
@@ -127,13 +136,17 @@ nav li a {
   width: 312px;
   height: 362px;
   padding: 15px;
-  margin-left: 10px;
   border: 1px solid lightgray;
   border-radius: 10px;
+  margin: 10px;
 }
 
 .match-details {
   display: flex;
+}
+
+.match-duration {
+  margin-right: 40px;
 }
 
 /* ----
@@ -201,3 +214,59 @@ hr {
 .footer-social hr {
   width: 50%;
 }
+
+/*--------------------------------------------------------------------------
+Index End 
+--------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------
+Upcoming match
+--------------------------------------------------------------------------*/
+.fixture-container {
+  height: 500px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  text-align: center;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.match-fixture {
+  width: 312px;
+  height: 242px;
+  padding: 0px 10px;
+  padding-top: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-left: -5px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.match-fixture h3 {
+  margin-top: -10px;
+}
+
+.match-fixture span {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.match-fixture span img {
+  padding: 30px 10px;
+}
+
+.vs {
+  margin-top: 50px;
+}
+
+.match-time {
+  color: #4D4D4D;
+}
+
+/*--------------------------------------------------------------------------
+Upcoming match end
+--------------------------------------------------------------------------*/
