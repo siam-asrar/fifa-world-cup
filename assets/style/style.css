@@ -1,32 +1,25 @@
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Poppins:wght@500&family=The+Nautigal:wght@700&display=swap');
 
 /* Common */
-
 body {
   font-family: 'Poppins', sans-serif;
-  background-repeat: no-repeat;
-  position: absolute;
-  justify-content: space-evenly;
   width: 100%;
+  justify-content: space-around;
 }
 
 /*--------------------------------------------------------------------------
 Index
 --------------------------------------------------------------------------*/
-
-/* ----
+/*-----
 Header 
 ------*/
-.header {
-  width: 1321px;
-  height: 530px;
+header {
   background: #161616;
   border-radius: 30px;
   display: flex;
-  padding: 33px 104px;
-  margin: 50px 0px 70px 175px;
+  justify-content: space-around;
+  margin: 70px 100px;
 }
 
 h1 {
@@ -44,6 +37,7 @@ h1:hover {
 }
 
 .banner-container {
+  display: flex;
   padding-top: 100px;
 }
 
@@ -55,11 +49,12 @@ h1:hover {
 }
 
 .banner-img {
+  padding: 0px 10px;
   transition: transform 1s;
 }
 
 .banner-img:hover {
-  transform: translateX(200px) scale(0.75);
+  transform: translateX(-200px) scale(0.75);
 }
 
 .watch-live {
@@ -81,21 +76,19 @@ h1:hover {
   padding: 3px;
 }
 
-/* ----
+/*-----
 Content
 ------*/
-
 .content {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 70px;
 }
 
 /* Navigation */
-
 .navigation {
   width: 252px;
   height: 252px;
+  margin-left: 100px;
   display: inline;
 }
 
@@ -133,15 +126,15 @@ nav li a {
 }
 
 /* Article */
-
 .match-info {
   height: 800px;
-  width: 50%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
   padding: 25px;
   margin-top: -20px;
-  margin-left: 50px;
+  margin-left: 200px;
 }
 
 .match-info button {
@@ -182,32 +175,39 @@ nav li a {
   margin-right: 40px;
 }
 
-.btn-tablet {
+.btn-tablet,
+.btn-tablet-2 {
   width: 120px;
   height: 40px;
   background-color: #DD0000;
   font-size: 20px;
   font-weight: 400;
   padding-top: 12px;
-  margin: 30px -410px;
+  margin: 30px -100px;
   border-radius: 5px;
   border: 0px;
   justify-content: center;
   display: none;
 }
 
-.btn-tablet a {
+.btn-tablet a,
+.btn-tablet-2 a {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-/* ----
+.btn-tablet-2 {
+  margin-left: 300px;
+  margin-top: 10px;
+}
+
+/*-----
 Footer
 ------*/
-
 .footer-main {
   width: 100%;
   background-color: #161616;
+  margin: -8px;
 }
 
 .footer-main h2 {
@@ -242,7 +242,7 @@ Footer
 }
 
 hr {
-  width: 100%;
+  width: 90%;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -266,27 +266,26 @@ hr {
   text-decoration: none;
 }
 
-.footer-social hr {
-  width: 50%;
-}
-
 /*--------------------------------------------------------------------------
 Index End 
 --------------------------------------------------------------------------*/
-
 /*--------------------------------------------------------------------------
 Upcoming match
 --------------------------------------------------------------------------*/
+.content-fixture {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px -100px;
+  padding: 10px;
+}
 
 .fixture-container {
-  height: 500px;
-  width: 1000px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  column-gap: 40px;
   text-align: center;
   padding-bottom: 50px;
-  margin-bottom: 40px;
+  margin: 0px 120px;
 }
 
 .match-fixture {
@@ -307,7 +306,7 @@ Upcoming match
 
 .match-fixture span {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 10px;
 }
 
@@ -326,15 +325,177 @@ Upcoming match
 /*--------------------------------------------------------------------------
 Upcoming match end
 --------------------------------------------------------------------------*/
-
 /*--------------------------------------------------------------------------
 Media Queries
 --------------------------------------------------------------------------*/
-
 /*Tablet */
-
 @media only screen and (min-width: 689px) and (max-width: 992px) {
-  .btn-tablet {
+
+  .btn-tablet,
+  .btn-tablet-2 {
     display: flex;
+  }
+
+  body {
+    margin-left: 120px;
+  }
+
+  .banner-container {
+    padding-bottom: 150px;
+    width: 20%;
+  }
+
+  header {
+    margin: 0px -110px;
+    padding: 0px 100px;
+    width: 100%;
+  }
+
+  .content {
+    display: block;
+    margin: 0px 25px;
+  }
+
+  nav>ul {
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 10px 10px;
+    justify-content: center;
+    justify-items: end;
+    margin: 2px 200px;
+  }
+
+  .nav-btn {
+    width: 200px;
+    margin: 0px;
+    margin-left: 30px;
+    border: 1px solid;
+    text-align: center;
+  }
+
+  .match-info {
+    height: 100%;
+    margin: 0px -20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+  }
+
+  .content-fixture {
+    display: block;
+    margin: 0px 10px;
+  }
+
+  .fixture-container {
+    height: 100%;
+    margin: 0px 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    margin-bottom: -120px;
+  }
+
+  footer {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  .footer-social>ul {
+    margin: 0px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 688px) {
+  .banner-container {
+    width: 20%;
+    display: block;
+    margin: 0px -10px;
+  }
+
+  .header {
+    margin-left: 150px;
+  }
+
+  .banner-img {
+    padding-top: 50px;
+  }
+
+  header {
+    margin: 0px -110px;
+    padding: 0px 100px;
+    width: 100%;
+  }
+
+  nav>ul {
+    height: 100%;
+    background-color: #FFFFFF;
+    display: block;
+    padding: 10px 10px;
+    justify-content: space-evenly;
+    margin: 20px 120px;
+    margin-bottom: -20px;
+  }
+
+  nav>ul>li {
+    margin: 0px -60px;
+    margin-bottom: 20px;
+  }
+
+  .nav-btn {
+    width: 200px;
+    margin: 10px;
+    margin-left: 30px;
+    border: 1px solid;
+    text-align: center;
+  }
+
+  .content {
+    display: block;
+    margin: 0px -10px;
+  }
+
+  .match-info {
+    height: 100%;
+    margin: 0px 10px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-around;
+  }
+
+  .match {
+    margin-left: 20px;
+  }
+
+  .match-fixture {
+    margin-left: 20px;
+  }
+
+  .content-fixture {
+    display: block;
+    margin: 0px -10px;
+  }
+
+  .fixture-container {
+    height: 100%;
+    margin: 0px 10px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-around;
+    margin-bottom: -70px;
+  }
+
+  footer {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .footer-menu ul {
+    display: inline;
+    justify-content: space-around;
+  }
+
+  .footer-social>ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1px 10px;
+    margin: 0px 10px;
   }
 }
