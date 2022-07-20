@@ -1,7 +1,11 @@
+/* Styling for - index & upcoming match*/
+
 /* Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:ital@1&family=Poppins:wght@500&family=The+Nautigal:wght@700&display=swap');
 
 /* Common */
+
 body {
   font-family: 'Poppins', sans-serif;
   width: 100%;
@@ -15,6 +19,7 @@ Index
 /*-----
 Header 
 ------*/
+
 header {
   background: #161616;
   border-radius: 30px;
@@ -80,12 +85,14 @@ h1:hover {
 /*-----
 Content
 ------*/
+
 .content {
   display: flex;
   justify-content: space-evenly;
 }
 
 /* Navigation */
+
 .navigation {
   width: 252px;
   height: 252px;
@@ -127,6 +134,7 @@ nav li a {
 }
 
 /* Article */
+
 .match-info {
   height: 800px;
   width: 100%;
@@ -205,6 +213,7 @@ nav li a {
 /*-----
 Footer
 ------*/
+
 .footer-main {
   width: 100%;
   background-color: #161616;
@@ -263,7 +272,6 @@ hr {
   color: #FFFFFF;
   text-align: center;
   list-style: none;
-  /* margin-right: 20px; */
   text-decoration: none;
 }
 
@@ -274,6 +282,7 @@ Index End
 /*--------------------------------------------------------------------------
 Upcoming match
 --------------------------------------------------------------------------*/
+
 .content-fixture {
   display: flex;
   justify-content: space-around;
@@ -331,7 +340,9 @@ Upcoming match end
 /*--------------------------------------------------------------------------
 Media Queries
 --------------------------------------------------------------------------*/
+
 /*Tablet */
+
 @media only screen and (min-width: 689px) and (max-width: 992px) {
 
   .btn-tablet,
@@ -408,6 +419,7 @@ Media Queries
 }
 
 /* Mobile */
+
 @media only screen and (max-width: 688px) {
   .banner-container {
     width: 20%;
@@ -502,3 +514,5 @@ Media Queries
     margin: 0px 10px;
   }
 }
+
+/* End Style*/
